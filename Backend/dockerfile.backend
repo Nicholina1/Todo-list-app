@@ -1,0 +1,20 @@
+# Backend Dockerfile
+
+# Node.js base image used
+FROM node:23.1.0-alpine3.19
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package.json package-lock.json ./
+RUN npm install
+
+# Copy the rest of the app files
+COPY . .
+
+# Expose port used by the backend
+EXPOSE 3000
+
+# Command for starting app
+CMD ["npm", "run", "start"]
