@@ -85,7 +85,7 @@ Use the provided script to test the containers:
 ./test_containers.sh
 ```
 This script will:
-- Verify if the **frontend** and backend are accessible.
+- Verify if the **frontend** and **backend** are accessible.
 
 ---
 
